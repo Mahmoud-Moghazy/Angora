@@ -1,0 +1,455 @@
+/* Global settings  */
+/* ========================================================================================== */
+html,body{
+    scroll-behavior: smooth;
+    --main-color-Bean-Red:rgb(242,84,84);
+    --color-black:rgb(0,0,0);
+    --color-bg:rgb(245,245,245);
+    --color-head:rgb(236,236,236);
+    font-family: 'open sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,a{
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-black);
+}
+/* ========================================================================================== */
+.scrolled {
+    background-color: var(--color-black);
+    color: var(--color-bg);
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+/* ========================================================================================== */
+/* start header */
+/* start navbar */
+header .navbar{
+    z-index: 1000;
+}
+header .navbar .navbar-nav .nav-link,
+header .navbar .icons i{
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+header .navbar .navbar-nav .nav-link.active,
+header .navbar .navbar-nav .nav-link:focus,
+header .navbar .navbar-nav .nav-link:hover,
+header .navbar .navbar-toggler:hover,
+header .navbar .icons i:hover{
+    color: var(--main-color-Bean-Red);
+}
+header .navbar .navbar-toggler{
+    box-shadow: none;
+    color: white;
+}
+/* end navbar */
+/* ========================================================================================== */
+/* start section home  */
+header section#home .carousel-inner .carousel-item{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+header section#home .carousel-inner> :nth-child(1){
+    background-image: url(../images/bg/slideshow-1.jpg);
+}
+header section#home .carousel-inner> :nth-child(2){
+    background-image: url(../images/bg/slideshow-2.jpg);
+}
+header section#home .carousel-inner> :nth-child(3){
+    background-image: url(../images/bg/slideshow-3.jpg);
+}
+header section#home .carousel .slider-btn{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: -5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+header section#home .carousel .slider-btn button{
+    position: relative;
+    background-color: unset;
+    width: 50px;
+    height: 50px;
+    border: unset;
+    color: white;
+    padding: 5px;
+}
+header section#home .carousel .slider-btn button::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: white;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+header section#home .carousel .slider-btn button:hover,
+header section#home .carousel .slider-btn button:hover::after{
+    right: 0;
+    opacity: 1;
+    color: var(--main-color-Bean-Red);
+}
+header section#home .carousel .set-btn{
+    position: absolute;
+    z-index: 10;
+    top: 25%;
+    padding: 5px 10px 5px 15px;
+
+
+}
+header section#home .carousel .item-inner h2{
+    color: white;
+    font-size: 5vw;
+    font-weight: 800;
+}
+header section#home .carousel .anemi{
+    width: 30px;
+    height: 45px;
+    z-index: 1001;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+header section#home .carousel .anemi .dot{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    background-color: white;
+    animation-name: dow;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+@keyframes dow {
+    0%
+    {
+        top: 10%;
+    }
+    20%
+    {
+        top: 20%;
+    }
+    40%
+    {
+        top: 30%;
+    }
+    60%
+    {
+        top: 40%;
+        opacity: 0.8;
+    }
+    80%
+    {
+        top: 50%;
+        opacity: 0.4;
+    }
+    100%
+    {
+        top: 60%;
+        opacity: 0.2;
+    }
+}
+/* end section home  */
+/* end header */
+/* ========================================================================================== */
+/* start section one  */
+.sec-top h3{
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--color-head);
+}
+.sec-top h4{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.sec-top .front{
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.sec-top::after{
+    content: "";
+    position: absolute;
+    border: 1px solid black;
+    width: 5%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+.sec-top:hover::after{
+    width: 10%;
+}
+section#about .skills .progress-bar{
+    background-color: var(--main-color-Bean-Red);
+}
+
+
+/* end section one  */
+/* ========================================================================================== */
+/* start section tow  */
+section#team .sec-data figure{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+section#team .sec-data figure img{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+    -ms-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+}
+section#team .sec-data figure .caption{
+    z-index: -1;
+    top: 3%;
+    background-color: rgba(242,84,84, 0.8);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section#team .sec-data figcaption h3{
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+}
+section#team .sec-data .members:hover .caption{
+    top: 0;
+    z-index: 1;
+}
+section#team .sec-data .members:hover img{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+section#team .sec-data .members:hover h3{
+    color: var(--main-color-Bean-Red);
+}
+section#team .sec-footer .btn{
+    background-color: var(--main-color-Bean-Red);
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+section#team .sec-footer .btn:hover{
+    opacity: 0.7;
+}
+/* end section tow  */
+/* ========================================================================================== */
+/* start section three */
+section#projects{
+    background-color: var(--color-bg);
+}
+section#projects .sec-data .icon .fa{
+    color: var(--main-color-Bean-Red);
+}
+section#projects .sec-data .content h5{
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section#projects .sec-data .content:hover h5{
+    color: var(--main-color-Bean-Red);
+}
+/* end section three  */
+/* ========================================================================================== */
+/* start section four */
+section#services .sec-data .carousel-indicators{
+    position: unset;
+}
+section#services .sec-data .carousel-indicators [data-bs-target]{
+    width: 20%;
+    height: unset;
+    text-indent:unset;
+    flex: unset;
+}
+section#services .sec-data .carousel-indicators .active {
+    width: 30%;
+    opacity: 1;
+}
+section#services .sec-data .img-ind img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* end section four  */
+/* ========================================================================================== */
+/* start section five */
+section#Contact .content .info .fa{
+    color: var(--main-color-Bean-Red);
+}
+section#Contact .content .content-box .info h5{
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section#Contact .content .content-box .info .icon{
+    width: 25px;
+    text-align: center;
+}
+section#Contact .content .content-box .info:hover h5{
+    color: var(--main-color-Bean-Red);
+}
+
+section#Contact .content .content-box> :nth-child(3) p {
+    color: gray;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section#Contact .content .content-box> :nth-child(3) p:hover{
+    color: var(--main-color-Bean-Red);
+}
+section#Contact .form .form-control:focus{
+    box-shadow: var(--main-color-Bean-Red);
+    border: var(--main-color-Bean-Red) 2px solid;
+}
+section#Contact .form .btn{
+    background-color: var(--main-color-Bean-Red);
+    color: white;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+section#Contact .form .btn:hover{
+    opacity: 0.7;
+}
+/* end section five */
+/* ========================================================================================== */
+/* <!-- Start Footer --> */
+footer{
+    background-image: url(../images/map.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center ;
+
+}
+footer .icon{
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color-Bean-Red);
+    opacity: 0.7;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+footer .icon:hover{
+    opacity: 1;
+}
+footer .icon .fa{
+    color: white;
+}
+footer .box p{
+    color: gray;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+footer .box p:hover{
+    color: var(--main-color-Bean-Red);
+}
+
+footer .box .button-box .btn:hover{
+    color: var(--main-color-Bean-Red);
+    border: var(--main-color-Bean-Red) 1px solid;
+    background-color: unset;
+}
+
+footer .footer-end .icons .fa-brands{
+    color: white;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+footer .footer-end .icons .fa-brands:hover{
+    color: var(--main-color-Bean-Red);
+}
+footer .footer-end .text p{
+    color: gray;
+    margin-bottom: unset;
+}
+footer .footer-end .text span{
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+footer .footer-end .text span:hover{
+    color: var(--main-color-Bean-Red);
+}
+/* <!-- End Footer --> */
+
